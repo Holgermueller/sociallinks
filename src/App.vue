@@ -8,12 +8,20 @@ export default {
         link: "https://www.deviantart.com/holgermueller",
       },
       {
-        icon: "",
+        icon: "mid:mdi-instagram",
         name: "Instagram",
         link: "https://www.instagram.com/holgermmueller/",
       },
-      { icon: "", name: "Twitter", link: "https://twitter.com/thatHMMueller" },
-      { icon: "", name: "Github", link: "https://github.com/Holgermueller" },
+      {
+        icon: "mdi-twitter",
+        name: "Twitter",
+        link: "https://twitter.com/thatHMMueller",
+      },
+      {
+        icon: "mdi-github",
+        name: "Github",
+        link: "https://github.com/Holgermueller",
+      },
     ],
   }),
 };
@@ -32,13 +40,15 @@ export default {
 
   <main>
     <div v-for="(item, i) in items" :key="i">
-      <v-card>
+      <v-card elevation="0">
         <v-card-text>
           <a :href="item.link" target="_blank">
             <v-container>
               <v-row>
                 <v-col>
-                  <div>{{ item.name }}</div>
+                  <i class="fa-brands fa-twitter"></i>
+                  <font-awesome-icon icon="fa-brands fa-twitter" />
+                  <div>{{ item.icon }}</div>
                 </v-col>
                 <v-col>
                   <div>{{ item.name }}</div>
@@ -66,6 +76,10 @@ footer {
 
 header {
   display: grid;
+}
+
+.v-card {
+  margin: 2px 0;
 }
 
 a {
