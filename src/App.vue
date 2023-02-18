@@ -3,22 +3,22 @@ export default {
   data: () => ({
     items: [
       {
-        icon: "",
+        icon: "deviantart",
         name: "DeviantArt",
         link: "https://www.deviantart.com/holgermueller",
       },
       {
-        icon: "mid:mdi-instagram",
+        icon: "instagram",
         name: "Instagram",
         link: "https://www.instagram.com/holgermmueller/",
       },
       {
-        icon: "mdi-twitter",
+        icon: "",
         name: "Twitter",
         link: "https://twitter.com/thatHMMueller",
       },
       {
-        icon: "mdi-github",
+        icon: "",
         name: "Github",
         link: "https://github.com/Holgermueller",
       },
@@ -46,15 +46,13 @@ export default {
             <v-container>
               <v-row>
                 <v-col>
-                  <i class="fa-brands fa-twitter"></i>
-                  <font-awesome-icon icon="fa-brands fa-twitter" />
-                  <div>{{ item.icon }}</div>
+                  <font-awesome-icon :icon="['fab', 'item.icon']" />
                 </v-col>
                 <v-col>
                   <div>{{ item.name }}</div>
                 </v-col>
                 <v-col>
-                  <v-icon icon="mdi-open-in-new"></v-icon>
+                  <font-awesome-icon icon="fa-solid fa-up-right-from-square" />
                 </v-col>
               </v-row>
             </v-container>
