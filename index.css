@@ -1,0 +1,22 @@
+header {
+  line-height: 1.5;
+  text-align: center;
+  display: grid;
+}
+
+a {
+  color: black;
+  margin: 4px 8px;
+  padding: 2px 4px;
+}
+
+a:hover {
+  color: ghostwhite;
+  background: black;
+}
+
+footer {
+  line-height: 1.5;
+  text-align: center;
+  display: grid;
+}
