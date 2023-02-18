@@ -18,11 +18,16 @@ body {
 }
 
 .grid-item-left {
+  min-height: fit-content;
+  max-height: max-content;
   text-align: right;
+  margin-right: 8px;
 }
 
 .grid-item-right {
   text-align: left;
+  margin-left: 8px;
+  overflow: auto;
 }
 
 header {
@@ -35,6 +40,7 @@ header {
   color: black;
   margin: 4px 8px;
   padding: 2px 4px;
+  border-radius: 5px;
 }
 
 .header-link:hover {
@@ -43,11 +49,25 @@ header {
 }
 
 .card-link {
+  color: black;
   text-decoration: none;
+  font-size: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: center;
+  text-align: left;
+  border-radius: 5px;
+  margin-left: 16px;
+}
+
+.card-link:hover {
+  background-color: black;
+  color: white;
 }
 
 footer {
   line-height: 1.5;
   text-align: center;
   display: grid;
+  margin: 16px;
 }
