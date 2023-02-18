@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" href="/favicon.ico" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="index.css" />
     <script
@@ -12,15 +12,15 @@
     <title>HolgerMMueller | Artist</title>
   </head>
   <body>
-    <header>
-      <v-container>
-        <v-col>
-          <v-row> <h1>Holger M Mueller</h1></v-row>
-          <v-row> <h2>Artist | Writer | Traveller</h2></v-row>
-          <v-row> <h3>Batesville, AR</h3></v-row>
-          <v-row class="social-links">
+    <div class="app-container">
+      <div class="grid-container">
+        <header class="grid-item-left">
+          <h1>Holger M Mueller</h1>
+          <h2>Artist | Writer | Traveller</h2>
+          <h3>Batesville, AR</h3>
+          <div class="social-links">
             <a
-              class="link"
+              class="header-link"
               target="_blank"
               href="https://www.instagram.com/holgermmueller/"
             >
@@ -28,19 +28,31 @@
             ></a>
 
             <a
-              class="link"
+              class="header-link"
               target="_blank"
               href="https://www.deviantart.com/holgermueller"
             >
               <i class="fa-brands fa-deviantart"></i
             ></a>
-          </v-row>
-        </v-col>
-      </v-container>
-    </header>
+          </div>
+        </header>
 
-    <main>links go here</main>
-    <footer>&copy; 2023 Holger Mueller</footer>
-    <script type="module" src="/src/main.js"></script>
+        <main class="grid-item-right">
+          <div class="link-card">
+            <a class="card-link" href="">Instagram</a>
+          </div>
+          <div class="link-card">
+            <a class="card-link" href="">DeviantArt</a>
+          </div>
+          <div class="link-card">
+            <a class="card-link" href="">Twitter</a>
+          </div>
+          <div class="link-card">
+            <a class="card-link" href="">Github</a>
+          </div>
+        </main>
+      </div>
+      <footer>&copy; 2023 Holger Mueller</footer>
+    </div>
   </body>
 </html>

@@ -1,18 +1,49 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.app-container {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  align-content: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid-item-left {
+  text-align: right;
+}
+
+.grid-item-right {
+  text-align: left;
+}
+
 header {
   line-height: 1.5;
   text-align: center;
   display: grid;
 }
 
-a {
+.header-link {
   color: black;
   margin: 4px 8px;
   padding: 2px 4px;
 }
 
-a:hover {
+.header-link:hover {
   color: ghostwhite;
   background: black;
+}
+
+.card-link {
+  text-decoration: none;
 }
 
 footer {
