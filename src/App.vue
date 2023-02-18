@@ -3,22 +3,18 @@ export default {
   data: () => ({
     items: [
       {
-        icon: "deviantart",
         name: "DeviantArt",
         link: "https://www.deviantart.com/holgermueller",
       },
       {
-        icon: "instagram",
         name: "Instagram",
         link: "https://www.instagram.com/holgermmueller/",
       },
       {
-        icon: "",
         name: "Twitter",
         link: "https://twitter.com/thatHMMueller",
       },
       {
-        icon: "",
         name: "Github",
         link: "https://github.com/Holgermueller",
       },
