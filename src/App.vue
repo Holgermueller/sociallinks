@@ -1,4 +1,7 @@
 <script>
+import Header from "./components/layout/Header.vue";
+import Footer from "./components/layout/Footer.vue";
+
 export default {
   data: () => ({
     items: [
@@ -20,58 +23,46 @@ export default {
       },
     ],
   }),
+
+  components: {
+    Header,
+    Footer,
+  },
 };
 </script>
 
 <template>
-  <header>
-    <v-container>
-      <v-col>
-        <v-row> <h1>Holger Mueller</h1></v-row>
-        <v-row> <h2>Artist | Writer | Traveller</h2></v-row>
-        <v-row> <h3>Batesville, AR</h3></v-row>
-      </v-col>
-    </v-container>
-  </header>
+  <Header class="imported-header" />
 
   <main>
     <div v-for="(item, i) in items" :key="i">
-      <v-card elevation="0">
-        <v-card-text>
-          <a :href="item.link" target="_blank">
-            <v-container>
-              <v-row>
-                <v-col>
-                  <font-awesome-icon :icon="['fab', 'item.icon']" />
-                </v-col>
-                <v-col>
-                  <div>{{ item.name }}</div>
-                </v-col>
-                <v-col>
-                  <font-awesome-icon icon="fa-solid fa-up-right-from-square" />
-                </v-col>
-              </v-row>
-            </v-container>
-          </a>
-        </v-card-text>
-      </v-card>
+      <v-hover v-slot="{ isHovering, props }">
+        <v-card v-bind="props" :elevation="isHovering ? 6 : 0">
+          <v-card-text>
+            <a :href="item.link" target="_blank">
+              <v-container>
+                <v-row>
+                  <v-col class="d-flex justify-center align-center">
+                    <div>{{ item.name }}</div>
+                  </v-col>
+                  <v-col class="d-flex justify-center align-center">
+                    <font-awesome-icon
+                      icon="fa-solid fa-up-right-from-square"
+                    />
+                  </v-col>
+                </v-row>
+              </v-container>
+            </a>
+          </v-card-text>
+        </v-card>
+      </v-hover>
     </div>
   </main>
 
-  <footer>&copy; 2023 Holger Mueller</footer>
+  <Footer />
 </template>
 
 <style scoped>
-header,
-footer {
-  line-height: 1.5;
-  text-align: center;
-}
-
-header {
-  display: grid;
-}
-
 .v-card {
   margin: 2px 0;
 }
@@ -79,18 +70,18 @@ header {
 a {
   color: black;
 }
-
+/* 
 @media (min-width: 1024px) {
-  header {
+  imported-header {
     display: flex;
     place-items: center;
     padding-right: calc(var(--section-gap) / 2);
   }
 
-  header .wrapper {
+  imported-header {
     display: flex;
     place-items: flex-start;
     flex-wrap: wrap;
   }
-}
+} */
 </style>
