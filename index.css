@@ -62,6 +62,10 @@ h3 {
   background: black;
 }
 
+.commissions {
+  text-transform: uppercase;
+}
+
 .card-link {
   color: black;
   text-decoration: none;
