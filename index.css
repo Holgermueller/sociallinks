@@ -24,7 +24,6 @@ h1 {
   margin: 5% auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
@@ -53,13 +52,19 @@ h1 {
 
 .social-links {
   font-size: 2rem;
-  width: 75%;
   margin: auto;
   display: flex;
   justify-content: space-between;
   border-top: 1px solid black;
   border-bottom: 1px solid black;
   padding: 4px;
+  line-height: 1rem;
+}
+
+.social-links-cara {
+  width: max-content;
+  overflow: hidden;
+  align-self: center;
 }
 
 a {
